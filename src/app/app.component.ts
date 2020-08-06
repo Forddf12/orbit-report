@@ -19,5 +19,4 @@ export class AppComponent {
       new Satellite("ISS", "Space Station", "1998-11-20", "LOW", true),
     ]
   }
-
 }
