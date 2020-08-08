@@ -8,12 +8,12 @@
         <th>Launch Date</th>
     </tr>
     <tr *ngFor="let satellite of satellites">
-        <td [class.warning]="satellite.shouldShowWarning">{{satellite.type}}</td>
-        <td [class.td-style]="changeColor">{{satellite.name}}</td>
-        <td [class.td-style]="changeColor">{{satellite.type}}</td>
-        <td [class.td-style]="changeColor">{{satellite.operational}}</td>
-        <td [class.td-style]="changeColor">{{satellite.orbitType}}</td>
-        <td [class.td-style]="changeColor">{{satellite.launchDate}}</td>
+        
+        <td [style]="changeColor">{{satellite.name}}</td>
+        <td [class.warning]="satellite.shouldShowWarning()">{{satellite.type}}</td>
+        <td [style]="changeColor">{{satellite.operational}}</td>
+        <td [style]="changeColor">{{satellite.orbitType}}</td>
+        <td [style]="changeColor">{{satellite.launchDate}}</td>
         
     </tr> 
     
