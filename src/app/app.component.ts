@@ -21,7 +21,7 @@ export class AppComponent {
    
             let fetchedSatellites = data.satellites;
             for(let i = 0; i < fetchedSatellites.length; i++) {
-              let satInfo = new Satellite(fetchedSatellites.name, fetchedSatellites.type, fetchedSatellites.launchDate, fetchedSatellites.orbitType, fetchedSatellites.operational);
+              let satInfo = new Satellite(fetchedSatellites[i].name, fetchedSatellites[i].type, fetchedSatellites[i].launchDate, fetchedSatellites[i].orbitType, fetchedSatellites[i].operational);
               this.sourceList.push(satInfo);
 
             }             
