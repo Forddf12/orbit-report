@@ -21,19 +21,14 @@ export class AppComponent {
    
             let fetchedSatellites = data.satellites;
             for(let i = 0; i < fetchedSatellites.length; i++) {
-              let satInfo = new Satellite(fetchedSatellites[i].name, fetchedSatellites[i].type, fetchedSatellites[i].launchDate, fetchedSatellites[i].orbitType, fetchedSatellites[i].operational);
+              let satInfo = new Satellite(fetchedSatellites.name, fetchedSatellites.type, fetchedSatellites.launchDate, fetchedSatellites.orbitType, fetchedSatellites.operational);
               this.sourceList.push(satInfo);
 
             }             
-               
+            this.displayList = this.sourceList.slice(0);   
          }.bind(this));
-      }.bind(this));
-   
-      
-   }
-   ngOnInit() {
-   }
-   
+      }.bind(this));      
+   }   
    search(searchTerm: string): void {
       let matchingSatellites: Satellite[] = [];
       searchTerm = searchTerm.toLowerCase();
@@ -45,6 +40,6 @@ export class AppComponent {
       }
       // assign this.displayList to be the array of matching satellites
       // this will cause Angular to re-make the table, but now only containing matches
-      this.displayList = matchingSatellites;
-   }
+      this.displayList = matchingSatellites;      
+   }   
 }
