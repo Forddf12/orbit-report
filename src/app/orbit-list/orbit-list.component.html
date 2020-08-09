@@ -1,8 +1,10 @@
+<app-orbit-list [satellites]="displayList"></app-orbit-list>
+
 <h3>Orbit Report</h3>
 <table>
     <tr class="header-row">
-        <th class="sortable">Name</th>
-        <th class="sortable">Type</th>
+        <th (click)="sort(name)">Name</th>
+        <th (click)="sort(type)">Type</th>
         <th>Operational</th>
         <th>Orbit Type</th>
         <th>Launch Date</th>
